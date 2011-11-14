@@ -1,0 +1,191 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+	height: 100%;
+	width :100%;
+}
+body {
+	font-family: "lucida sans", verdana, arial, helvetica, sans-serif;
+	background-image:url(../images/handmadepaper.png);
+	font-size: 75%;
+	font-weight:bold;
+}
+
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+.leftbar {
+	float: left;
+	background: #DDE2EB;
+	min-height:100%;
+	min-width:25%;
+	overflow:hidden;
+	position:absolute;
+}
+.righttbar {
+	float: right;
+	min-height:100%;
+	min-width:75%;
+	position:relative;
+}
+
+.leftbar_header {
+	padding: 8px 0 8px 35px;
+	text-shadow:2px 2px 2px #FFF;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E8E8E8), to(#D0D0D0));
+	background: -webkit-linear-gradient(top, #E8E8E8, #D0D0D0);
+	background: -moz-linear-gradient(top, #E8E8E8, #D0D0D0);
+	background: -ms-linear-gradient(top, #E8E8E8, #D0D0D0);
+	background: -o-linear-gradient(top, #E8E8E8, #D0D0D0);
+}
+
+.add_icon {
+	background:#FFFFFF url(../images/icon_add.png) no-repeat center 50%;
+	display:inline-block;
+	float:right;
+	position:relative;
+	height:22px;
+	width:22px;
+	margin-right:12px;
+	margin-top:-4px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	border:1px solid #000000;
+}
+
+.drag {
+	background-image:url(../images/drag_handle.png);
+	height:12px;
+	width:15px;
+	background-repeat:no-repeat no-repeat;
+	display:inline-block;
+	float:left;
+	position:absolute;
+	margin:7px 0 0 10px;
+}
+
+.drag_active {
+	background-image:url(../images/drag_handle_active.png);
+	height:12px;
+	width:15px;
+	background-repeat:no-repeat no-repeat;
+	display:inline-block;
+	float:left;
+	position:absolute;
+	margin:7px 0 0 10px;
+}
+
+.cbox{
+	float:right;
+	position:relative;
+	margin-right:10px;
+	margin-top:7px;
+}
+
+.trash {
+	background-image:url(../images/icon_trash.png);
+	height:16px;
+	width:16px;
+	float:right;
+	position:relative;
+	margin-right:16px;
+	margin-top:5px;
+}
+
+.filter {
+	position:inherit;
+	bottom:0;
+	width:100%;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C0C0C0), to(#000000));
+	background: -webkit-linear-gradient(top, #C0C0C0, #000000);
+	background: -moz-linear-gradient(top, #C0C0C0, #000000);
+	background: -ms-linear-gradient(top, #C0C0C0, #000000);
+	background: -o-linear-gradient(top, #C0C0C0, #000000);
+	color:#FFFFFF;
+	padding: 5px 5px 5px 10px;
+	font-weight:normal;
+}
+
+#filter_box {
+	float: right;
+	border:1px solid #c0c0c0; 
+	padding: 2px; 
+	width: 70%;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin-right:20px;
+	padding:4px 4px 4px 4px;
+	background:#FFFFFF;
+}
+
+#filter_text {
+	background: #fff; 
+	border:none; 
+	width: 91%;
+}
+
+#filter_text_image {
+  	position:relative;
+	background: url(../images/icon_trash.png) no-repeat top left transparent;
+	height:16px;
+	width:16px;
+	vertical-align:top;
+	border:0;
+	cursor:pointer;
+}
+
+.tab_bar {
+	width: 75%;
+	float: right;
+	background: #98999C;
+}
+.tab {
+	width:120px;
+	height:28px;
+	line-height:2em;
+	text-align:center;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BDBDBD), to(#6F6F6F));
+	background: -webkit-linear-gradient(top, #BDBDBD, #6F6F6F);
+	background: -moz-linear-gradient(top, #BDBDBD, #6F6F6F);
+	background: -ms-linear-gradient(top, #BDBDBD, #6F6F6F);
+	background: -o-linear-gradient(top, #BDBDBD, #6F6F6F);
+	float:left;
+	position:inherit;
+	margin-left:5px;
+	margin-top:5px;
+	cursor:pointer;
+	border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+}
+
+.tab_active{
+	background-image:url(../images/handmadepaper.png);
+}
+
+
+
+
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+}
+ul.nav li {
+	border-bottom: 1px ridge #B3B3B3; /* this creates the button separation */
+	border-right: 1px solid #B3B3B3;
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 35px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	color: #000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FCFCFC), to(#E8E8E8));
+	background: -webkit-linear-gradient(top, #FCFCFC, #E8E8E8);
+	background: -moz-linear-gradient(top, #FCFCFC, #E8E8E8);
+	background: -ms-linear-gradient(top, #FCFCFC, #E8E8E8);
+	background: -o-linear-gradient(top, #FCFCFC, #E8E8E8);
+}
