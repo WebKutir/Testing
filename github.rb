@@ -37,17 +37,17 @@ class GitHub
   end
 
   def self.issue(message)
-    message[/issue-(\d+)/i,1]
+    message[/gh-(\d+)/i,1]
   end
 
   def self.closed_issues(message)
-    issues = message.scan(/(closes|fixes) (issue-|#)(\d+)/i).map{|m| m[2]}
+    issues = message.scan(/(closes|fixes) (gh-|#)(\d+)/i).map{|m| m[2]}
     return issues unless block_given?
     issues.each{ |issue| yield(issue) }
   end
 
   def self.nonclosing_issues(message)
-    issues = message.scan(/(closes|fixes)? (issue-|#)(\d+)/i).
+    issues = message.scan(/(closes|fixes)? (gh-|#)(\d+)/i).
       select{|m| m[0].nil? && m[1] != "#"}.
       map{|m| m[2]}
     return issues unless block_given?
